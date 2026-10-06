@@ -14,9 +14,9 @@ export const Footer = () => {
 
   return (
     <footer className="footer">
-      <a href="/" className="footer__logo">
+      <a href={import.meta.env.BASE_URL} className="footer__logo">
         <img
-          src="/favicon.png"
+          src={`${import.meta.env.BASE_URL}favicon.png`}
           alt="Phone Catalog"
           className="footer__logo-image"
         />

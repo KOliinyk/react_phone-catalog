@@ -60,7 +60,7 @@ export const Header = () => {
       <div className="header__container">
         <Link to="/" className="header__logo">
           <img
-            src="/favicon.png"
+            src={`${import.meta.env.BASE_URL}favicon.png`}
             alt="Phone Catalog"
             className="header__logo-image"
           />
