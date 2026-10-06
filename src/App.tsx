@@ -1,9 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-
 import { Home } from './pages/Home/Home';
 import { Phones } from './pages/Phones/Phones';
 import { Tablets } from './pages/Tablets/Tablets';
@@ -12,12 +10,10 @@ import { ProductDetails } from './pages/ProductDetails/ProductDetails';
 import { Cart } from './pages/Cart/Cart';
 import { Favorites } from './pages/Favorites/Favorites';
 import { NotFound } from './pages/NotFound/NotFound';
-
 import { CartProvider } from './context/CartContext';
 import { FavoritesProvider } from './context/FavoritesContext';
 import { ThemeProvider } from './context/ThemeContext';
 import { LanguageProvider } from './context/LanguageContext';
-
 export const App: React.FC = () => {
   return (
     <LanguageProvider>
@@ -26,7 +22,6 @@ export const App: React.FC = () => {
           <FavoritesProvider>
             <Router>
               <Header />
-
               <main className="main-content">
                 <Routes>
                   <Route path="/" element={<Home />} />
@@ -39,7 +34,6 @@ export const App: React.FC = () => {
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </main>
-
               <Footer />
             </Router>
           </FavoritesProvider>
@@ -48,3 +42,4 @@ export const App: React.FC = () => {
     </LanguageProvider>
   );
 };
+
