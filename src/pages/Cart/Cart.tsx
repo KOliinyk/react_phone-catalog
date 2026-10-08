@@ -33,7 +33,11 @@ export const Cart = () => {
         <>
           {state.items.map(item => (
             <article key={item.id}>
-              <img src={`/${item.image}`} alt={item.name} width="150" />
+              <img
+                src={`${import.meta.env.BASE_URL}${item.image}`}
+                alt={item.name}
+                width="150"
+              />
 
               <h2>{item.name}</h2>
 

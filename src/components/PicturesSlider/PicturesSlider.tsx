@@ -6,17 +6,17 @@ import './PicturesSlider.scss';
 
 const slides = [
   {
-    image: '/img/banner-phones.png',
+    image: `${import.meta.env.BASE_URL}img/banner-phones.png`,
     key: 'phones' as const,
     link: '/phones',
   },
   {
-    image: '/img/banner-tablets.png',
+    image: `${import.meta.env.BASE_URL}img/banner-tablets.png`,
     key: 'tablets' as const,
     link: '/tablets',
   },
   {
-    image: '/img/banner-accessories.png',
+    image: `${import.meta.env.BASE_URL}img/banner-accessories.png`,
     key: 'accessories' as const,
     link: '/accessories',
   },

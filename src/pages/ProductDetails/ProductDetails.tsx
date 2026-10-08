@@ -167,7 +167,7 @@ export const ProductDetails = () => {
         {images.length > 0 && (
           <>
             <img
-              src={`/${images[selectedImage]}`}
+              src={`${import.meta.env.BASE_URL}${images[selectedImage]}`}
               alt={product.name}
               width="300"
               onError={() => handleImageError(images[selectedImage])}
@@ -182,7 +182,7 @@ export const ProductDetails = () => {
                   aria-label={`${t('showImage')} ${index + 1}`}
                 >
                   <img
-                    src={`/${image}`}
+                    src={`${import.meta.env.BASE_URL}${image}`}
                     alt=""
                     width="60"
                     onError={() => handleImageError(image)}
